@@ -6,7 +6,7 @@ It aims to break down barriers created by gatekeeping within the community and m
 
 ### Important Notes
 1. **This is not official documentation.**
-   - Everything documented here is based (so far) on my own findings, experiments, and reverse engineering.
+   - Everything documented here is based (so far) on my own findings, experiments, and reverse engineering **(AND ONLY APPLIES TO PSN)**.
    - This information is provided "as is" and should not be taken as an exact 1:1 representation of the original backend.
 2. **Use at your own risk.**
    - The information is functional based on testing but is neither complete nor error-free.
