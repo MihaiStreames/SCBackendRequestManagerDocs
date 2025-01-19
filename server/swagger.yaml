@@ -1,0 +1,105 @@
+openapi: 3.0.0
+info:
+  title: The Friday the 13th Backend Project
+  version: 1.0.0
+  description: Extensive work in progress!
+servers:
+  - url: https://ps4.f13-matchmaking.illfonic.com:3030
+    description: Matchmaking Service
+  - url: https://ps4.f13.illfonic.com:9110
+    description: Arbiter Service
+  - url: https://ps4.f13.illfonic.com:9130
+    description: Authentication Service
+  - url: https://ps4.f13.illfonic.com:9140
+    description: Profile Authority
+  - url: https://ps4.f13.illfonic.com:9150
+    description: News Service
+paths:
+  /v0/achievements:
+    get:
+      responses:
+        '200':
+          description: Response status 200
+          content:
+            application/json:
+              examples:
+                ps4:
+                  value: >
+                    {"AchievementsProfile":{"Awards":[],"Badges":[],"MergedIDs":null,"NewProfile":false},"AchievementsTapesProfile":{"PamelaTapes":[],"TommyTapes":[]}}
+      parameters:
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
+  /v0/matchmaking/status:
+    get:
+      responses:
+        '200':
+          description: Response status 200
+          content:
+            application/json:
+              examples:
+                ps4:
+                  value: >-
+                    {"Statuses":[{"AccountID":"","Error":null,"MatchmakingBanSeconds":0,"MatchmakingStatus":"OK"}]}
+      parameters:
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
+  /v0/singleplayer/profile:
+    get:
+      responses:
+        '200':
+          description: Response status 200
+          content:
+            application/json:
+              examples:
+                ps4:
+                  value: '{"Challenges":[]}'
+      parameters:
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
+  /v0/stats:
+    get:
+      responses:
+        '200':
+          description: Response status 200
+      parameters:
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
+  /v0/inventory/perks/cashin:
+    post:
+      responses:
+        '200':
+          description: Response status 200
+      parameters:
+        - name: InstanceID
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
+  /v0/singleplayer/report:
+    post:
+      responses:
+        '200':
+          description: Response status 200
+      parameters:
+        - name: AccountID
+          in: query
+          required: false
+          schema:
+            type: string
