@@ -1,4 +1,4 @@
-# The Friday the 13th Backend Project
+# SCBackendRequestManager Documentation Project
 
 ## Purpose
 This repository is a comprehensive, community-driven project documenting the backend structure of the now-abandonware game **_Friday the 13th_**.
