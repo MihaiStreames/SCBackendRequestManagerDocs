@@ -1,0 +1,48 @@
+get:
+    tags:
+        - News Service
+    summary: Get game news
+    description: |
+        Retrieves game news and announcements.
+        Detailed documentation: [../../../endpoints/9150/news.md](../../../endpoints/9150/news.md)
+    parameters:
+        -   name: Page
+            in: query
+            required: false
+            schema:
+                type: string
+            description: Page number for pagination
+        -   name: NumPerPage
+            in: query
+            required: false
+            schema:
+                type: string
+            description: Number of news items per page
+        -   name: Category
+            in: query
+            required: false
+            schema:
+                type: string
+            description: Filter news by category
+    responses:
+        '200':
+            description: Successfully retrieved news
+            content:
+                application/json:
+                    example:
+                        Category: "ps4"
+                        NewsItems:
+                            -   Content: "The PS4 Server Test Build is currently live and operational!\n\nIf you encounter cheaters, please report them here:\nhttps://discord.gg/cn5B7SEba8\n"
+                                Headline: "PSTB (PS4 Server Test Build) v0.0.1"
+                                NewsItemId: "0"
+                                UnixTime: 1710864000
+                        Page: "1"
+                        NumPerPage: "10"
+                        TotalCount: 1
+        '404':
+            description: No news items available
+            content:
+                application/json:
+                    example:
+                        error: "No news items available"
+                        status: "ERROR"

@@ -1,0 +1,42 @@
+post:
+    tags:
+        - Profile Authority
+    summary: Add experience points
+    description: |
+        Adds experience points to the player's profile and updates level progress.
+        Detailed documentation: [../../../endpoints/9140/experience.md](../../../endpoints/9140/experience.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+        -   name: Exp
+            in: query
+            required: true
+            schema:
+                type: string
+            description: Amount of experience points to add
+    responses:
+        '200':
+            description: Experience successfully added
+            content:
+                application/json:
+                    example:
+                        message: "Experience added and level updated successfully!"
+                        status: "OK"
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"
+        '400':
+            description: Invalid experience value
+            content:
+                application/json:
+                    example:
+                        error: "Exp parameter must be integer"
+                        status: "ERROR"

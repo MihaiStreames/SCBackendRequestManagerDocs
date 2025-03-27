@@ -1,0 +1,42 @@
+get:
+    tags:
+        - Profile Authority
+    summary: Get player statistics
+    description: |
+        Retrieves the player's game statistics.
+        Detailed documentation: [../../../endpoints/9140/stats.md](../../../endpoints/9140/stats.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    responses:
+        '200':
+            description: Successfully retrieved player statistics
+            content:
+                application/json:
+                    example:
+                        StatsProfile:
+                            Counselor:
+                                Deaths: 0
+                                EscapesWithItems: 0
+                                EscapesWithOthers: 0
+                                EscapesWithoutItems: 0
+                                FemaleChars: 0
+                                MaleChars: 0
+                                Matches: 0
+                                Repairs: 0
+                                Survivals: 0
+                            Jason:
+                                EnvironmentalKills: 0
+                                Kills: 0
+                                Matches: 0
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"

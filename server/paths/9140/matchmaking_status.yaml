@@ -1,0 +1,32 @@
+get:
+    tags:
+        - Profile Authority
+    summary: Get matchmaking status
+    description: |
+        Retrieves the player's current matchmaking status and any active bans.
+        Detailed documentation: [../../../endpoints/9140/matchmaking_status.md](../../../endpoints/9140/matchmaking_status.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    responses:
+        '200':
+            description: Successfully retrieved matchmaking status
+            content:
+                application/json:
+                    example:
+                        Statuses:
+                            -   AccountID: ""
+                                Error: null
+                                MatchmakingBanSeconds: 0
+                                MatchmakingStatus: "OK"
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"

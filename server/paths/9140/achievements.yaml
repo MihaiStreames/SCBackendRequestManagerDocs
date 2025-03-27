@@ -1,0 +1,35 @@
+get:
+    tags:
+        - Profile Authority
+    summary: Get player achievements
+    description: |
+        Retrieves the player's achievements and badges.
+        Detailed documentation: [../../../endpoints/9140/achievements.md](../../../endpoints/9140/achievements.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    responses:
+        '200':
+            description: Successfully retrieved achievements
+            content:
+                application/json:
+                    example:
+                        AchievementsProfile:
+                            Awards: [ ]
+                            Badges: [ ]
+                            MergedIDs: null
+                            NewProfile: false
+                        AchievementsTapesProfile:
+                            PamelaTapes: [ ]
+                            TommyTapes: [ ]
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"

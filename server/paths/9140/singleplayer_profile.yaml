@@ -1,0 +1,28 @@
+get:
+    tags:
+        - Profile Authority
+    summary: Get single player profile
+    description: |
+        Retrieves the player's single player challenges and progress.
+        Detailed documentation: [../../../endpoints/9140/singleplayer_profile.md](../../../endpoints/9140/singleplayer_profile.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    responses:
+        '200':
+            description: Successfully retrieved single player profile
+            content:
+                application/json:
+                    example:
+                        Challenges: [ ]
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"

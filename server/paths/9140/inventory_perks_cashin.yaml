@@ -1,0 +1,35 @@
+post:
+    tags:
+        - Profile Authority
+    summary: Cash in a perk for CP
+    description: |
+        Sells a perk back for customization points.
+        Detailed documentation: [../../../endpoints/9140/inventory_perks_cashin.md](../../../endpoints/9140/inventory_perks_cashin.md)
+    parameters:
+        -   name: InstanceID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The unique identifier of the perk to cash in
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    responses:
+        '200':
+            description: Perk successfully cashed in
+            content:
+                application/json:
+                    example:
+                        message: "Perk cashed in successfully!"
+                        status: "OK"
+        '404':
+            description: Perk or account not found
+            content:
+                application/json:
+                    example:
+                        error: "Perk not found"
+                        status: "ERROR"

@@ -1,0 +1,39 @@
+post:
+    tags:
+        - Profile Authority
+    summary: Report single player challenge progress
+    description: |
+        Updates the player's progress on single player challenges.
+        Detailed documentation: [../../../endpoints/9140/singleplayer_report.md](../../../endpoints/9140/singleplayer_report.md)
+    parameters:
+        -   name: AccountID
+            in: query
+            required: true
+            schema:
+                type: string
+            description: The player's account identifier
+    requestBody:
+        required: true
+        content:
+            application/json:
+                schema:
+                    type: object
+                example:
+                    ChallengeName: "Tutorial"
+                    Status: "Completed"
+                    Stars: 3
+    responses:
+        '200':
+            description: Successfully updated challenge
+            content:
+                application/json:
+                    example:
+                        message: "Challenge updated successfully!"
+                        status: "OK"
+        '404':
+            description: Account not found
+            content:
+                application/json:
+                    example:
+                        error: "Account not found"
+                        status: "ERROR"
