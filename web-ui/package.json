@@ -1,0 +1,27 @@
+{
+	"name": "f13-web-ui",
+	"version": "1.0.0",
+	"description": "Documentation server for Friday the 13th Backend Project",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js"
+	},
+	"keywords": [
+		"swagger",
+		"documentation",
+		"express",
+		"api"
+	],
+	"author": "MihaiStreames",
+	"license": "ISC",
+	"type": "commonjs",
+	"dependencies": {
+		"express": "^4.21.2",
+		"express-markdown": "^0.0.6",
+		"fs-extra": "^11.3.0",
+		"js-yaml": "^4.1.0",
+		"marked": "^15.0.7",
+		"swagger-ui-express": "^5.0.1"
+	}
+}

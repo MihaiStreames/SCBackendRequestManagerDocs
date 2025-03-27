@@ -1,4 +1,9 @@
 .idea
+
+# Python
 __pycache__
 /py
-/targets
+
+# Node.js + Bundled Swagger UI
+/web-ui/node_modules
+/web-ui/swagger.yaml

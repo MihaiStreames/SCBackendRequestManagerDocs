@@ -17,46 +17,46 @@ servers:
 
 paths:
     # Matchmaking Service (3030)
-    /v1/bypass:
-        $ref: "./paths/3030/bypass.yaml"
-    /v1/cancel:
-        $ref: "./paths/3030/cancel.yaml"
-    /v1/describe:
-        $ref: "./paths/3030/describe.yaml"
-    /v1/queue:
-        $ref: "./paths/3030/queue.yaml"
-    /v1/regions/udp:
-        $ref: "./paths/3030/regions_udp.yaml"
+    # /v1/bypass:
+    #     $ref: "./paths/3030/bypass.yaml"
+    # /v1/cancel:
+    #     $ref: "./paths/3030/cancel.yaml"
+    # /v1/describe:
+    #     $ref: "./paths/3030/describe.yaml"
+    # /v1/queue:
+    #     $ref: "./paths/3030/queue.yaml"
+    # /v1/regions/udp:
+    #     $ref: "./paths/3030/regions_udp.yaml"
 
     # Arbiter Service (9110)
     /v0/validate:
         $ref: "./paths/9110/validate.yaml"
     /v0/heartbeat:
         $ref: "./paths/9110/heartbeat.yaml"
-    /v0/jason/select:
-        $ref: "./paths/9110/jason_select.yaml"
-    /v0/xbox/servers/session:
-        $ref: "./paths/9110/xbox_servers_session.yaml"
+    # /v0/jason/select:
+    #     $ref: "./paths/9110/jason_select.yaml"
+    # /v0/xbox/servers/session:
+    #     $ref: "./paths/9110/xbox_servers_session.yaml"
 
     # Key Distribution Service (9111)
-    /v0/aes256/create:
-        $ref: "./paths/9111/aes256_create.yaml"
-    /v0/aes256/retrieve:
-        $ref: "./paths/9111/aes256_retrieve.yaml"
+    # /v0/aes256/create:
+    #     $ref: "./paths/9111/aes256_create.yaml"
+    # /v0/aes256/retrieve:
+    #     $ref: "./paths/9111/aes256_retrieve.yaml"
 
     # Instance Authority (9120)
-    /v0/instance/report:
-        $ref: "./paths/9120/instance_report.yaml"
-    /v0/instance/heartbeat:
-        $ref: "./paths/9120/instance_heartbeat.yaml"
+    # /v0/instance/report:
+    #     $ref: "./paths/9120/instance_report.yaml"
+    # /v0/instance/heartbeat:
+    #     $ref: "./paths/9120/instance_heartbeat.yaml"
 
     # Authentication Service (9130)
     /v0/login/playstation:
         $ref: "./paths/9130/login_playstation.yaml"
-    /v0/login/steam:
-        $ref: "./paths/9130/login_steam.yaml"
-    /v0/login/xboxlive:
-        $ref: "./paths/9130/login_xboxlive.yaml"
+    # /v0/login/steam:
+    #     $ref: "./paths/9130/login_steam.yaml"
+    # /v0/login/xboxlive:
+    #     $ref: "./paths/9130/login_xboxlive.yaml"
     /v0/account:
         $ref: "./paths/9130/account.yaml"
 
@@ -65,36 +65,36 @@ paths:
         $ref: "./paths/9140/matchmaking_status.yaml"
     /v1/experience:
         $ref: "./paths/9140/experience.yaml"
-    /v0/achievements/unlock:
-        $ref: "./paths/9140/achievements_unlock.yaml"
-    /v0/infractions/add:
-        $ref: "./paths/9140/infractions_add.yaml"
+    # /v0/achievements/unlock:
+    #     $ref: "./paths/9140/achievements_unlock.yaml"
+    # /v0/infractions/add:
+    #     $ref: "./paths/9140/infractions_add.yaml"
     /v0/singleplayer/profile:
         $ref: "./paths/9140/singleplayer_profile.yaml"
     /v0/singleplayer/report:
         $ref: "./paths/9140/singleplayer_report.yaml"
-    /v0/inventory/purchase:
-        $ref: "./paths/9140/inventory_purchase.yaml"
-    /v1/inventory/perks/purchase:
-        $ref: "./paths/9140/inventory_perks_purchase.yaml"
+    # /v0/inventory/purchase:
+    #     $ref: "./paths/9140/inventory_purchase.yaml"
+    # /v1/inventory/perks/purchase:
+    #     $ref: "./paths/9140/inventory_perks_purchase.yaml"
     /v0/inventory/perks/cashin:
         $ref: "./paths/9140/inventory_perks_cashin.yaml"
-    /v0/stats/matches/report:
-        $ref: "./paths/9140/stats_matches_report.yaml"
+    # /v0/stats/matches/report:
+    #     $ref: "./paths/9140/stats_matches_report.yaml"
     /v0/stats:
         $ref: "./paths/9140/stats.yaml"
     /v0/achievements:
         $ref: "./paths/9140/achievements.yaml"
-    /v0/data/pamelatapes/active:
-        $ref: "./paths/9140/data_pamelatapes_active.yaml"
-    /v0/inventory/pamelatapes/add:
-        $ref: "./paths/9140/inventory_pamelatapes_add.yaml"
-    /v0/data/tommytapes/active:
-        $ref: "./paths/9140/data_tommytapes_active.yaml"
-    /v0/inventory/tommytapes/add:
-        $ref: "./paths/9140/inventory_tommytapes_add.yaml"
-    /v0/data/modifiers:
-        $ref: "./paths/9140/data_modifiers.yaml"
+    # /v0/data/pamelatapes/active:
+    #     $ref: "./paths/9140/data_pamelatapes_active.yaml"
+    # /v0/inventory/pamelatapes/add:
+    #     $ref: "./paths/9140/inventory_pamelatapes_add.yaml"
+    # /v0/data/tommytapes/active:
+    #     $ref: "./paths/9140/data_tommytapes_active.yaml"
+    # /v0/inventory/tommytapes/add:
+    #     $ref: "./paths/9140/inventory_tommytapes_add.yaml"
+    # /v0/data/modifiers:
+    #     $ref: "./paths/9140/data_modifiers.yaml"
 
     # News Service (9150)
     /v0/news:
