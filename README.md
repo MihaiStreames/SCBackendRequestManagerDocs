@@ -17,10 +17,6 @@ It aims to break down barriers created by gatekeeping within the community and m
 - **Endpoints**: Documentation of backend endpoints, including request and response structures.
 - **Packet Structures**: Information on game packet formats, field definitions, and examples.
 
-## Contributing
-Contributions are welcome!
-If you’ve got verified info or ideas to improve this documentation, go ahead and submit a pull request.
-
 ## Disclaimer
 This project is unaffiliated with the developers or publishers of *Friday the 13th*.
 All trademarks and copyrights are the property of their respective owners.
